@@ -4,7 +4,7 @@
 main(int argc, char *argv[], char *envp[])
 {
 
-  printf("\n\nKiranDor (testing): Hello World\n");
+  printf("\n\nMe (testing): Hello World\n");
 
   exit(0);
 
