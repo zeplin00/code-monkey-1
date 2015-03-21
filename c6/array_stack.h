@@ -35,6 +35,8 @@ public:
 
     if (top == max_size) throw StackError(1); 
 
+    std::cout << "Top = " << top << std::endl;
+
     std::cout << "Pushing " << c << std::endl;
 
     v[top++] = c;
@@ -45,6 +47,8 @@ public:
 
     if (top == 0) throw StackError(2); 
 
+    std::cout << "Top = " << top << std::endl;
+    
     char c = v[--top];
 
     std::cout << "Popping " << c << std::endl;

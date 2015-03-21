@@ -1,9 +1,9 @@
 
 # A simple makefile (Believe me - very simple...)
 
-TARGET := concept2
+TARGET := c2
 
-SRC := concept2.cpp
+SRC := c2.cpp
 
 ################################################################
 

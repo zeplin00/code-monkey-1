@@ -19,7 +19,7 @@ void use_gstack(Stack& s_ref)
 
   try {
 
-    s_ref.pop();
+    while (true) s_ref.pop();
 
   } catch (StackError& se) {
 

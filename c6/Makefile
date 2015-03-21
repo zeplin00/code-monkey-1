@@ -5,7 +5,7 @@ TARGET := c6
 
 SRC := c6.cpp stack_user.cpp
 
-HEADERS := stack.h array_stack.h stack_user.h
+HEADERS := stack.h array_stack.h
 
 ################################################################
 

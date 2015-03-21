@@ -22,6 +22,10 @@ void f()
 
   si.push(10);  
 
+  int v = si.pop();  
+
+  char c = sc.pop();  
+
   return;
 
 }
