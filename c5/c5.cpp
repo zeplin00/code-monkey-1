@@ -36,6 +36,8 @@ void f(Stack& s_ref, int i)
 
   s_var1.pop();
 
+  delete s_ptr;
+
   return;
 
 }

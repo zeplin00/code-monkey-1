@@ -13,10 +13,13 @@ namespace Stack {
 }
 
 void Stack::push(char c) {
-  
+ 
+  	
+  std::cout << "Attempting Push " << c << std::endl;
+	 
   if (top == max_size) throw Overflow();
 
-  std::cout << "Pushing " << c << std::endl;
+  std::cout << "Pushed " << c << std::endl;
 
   v[top++] = c;
 
@@ -26,11 +29,13 @@ void Stack::push(char c) {
 
 char Stack::pop() { 
 
+  std::cout << "Attempting Pop" << std::endl;
+
   if (top == 0) throw Underflow();
 
   char pop = v[--top];
 
-  std::cout << "Popping " << pop << std::endl;
+  std::cout << "Popped " << pop << std::endl;
 
   return(pop);
 
