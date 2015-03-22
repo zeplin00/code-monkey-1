@@ -4,12 +4,12 @@
 
 #include "stack.h"
 
-void use_gstack(Stack& s_ref)
+void use_gstack(Stack *s_ref)
 {
 
   try {
 
-    while (true) s_ref.push('c'); 
+    while (true) s_ref->push('c'); 
 
   } catch (StackError& se) {
 
@@ -19,7 +19,7 @@ void use_gstack(Stack& s_ref)
 
   try {
 
-    while (true) s_ref.pop();
+    while (true) s_ref->pop();
 
   } catch (StackError& se) {
 
