@@ -3,6 +3,7 @@
 #include <stack>
 #include <queue>
 #include <list>
+#include <bitset>
 
 using namespace std;
 
@@ -32,8 +33,10 @@ int main(int argc, char *argv[], char **envp)
 
   // Setup visited and completed arrays
   //
-  vector<bool> visited(numVertices);
-  vector<bool> completed(numVertices);
+  // vector<bool> visited(numVertices);
+  // vector<bool> completed(numVertices);
+  bitset<100> visited;
+  bitset<100> completed;
 
   while (st.empty() == false) {
 
