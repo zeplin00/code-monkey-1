@@ -17,7 +17,14 @@ int main(int argc, char *argv[], char **envp)
   T->insert(8);
 
   for (int i = 0; i <= 10; i++)
-    if (T->find(i)) cout << "Found val = " << i << endl ;
+    if (T->find(i)) {
+      cout << "Found val = " << i << endl ;
+      cout << "Succ = " << T->succ(i) << endl;
+      cout << "Pred = " << T->pred(i) << endl;
+    }
+
+  cout << "Max = " << T->max() << endl;
+  cout << "Min = " << T->min() << endl;
 
   cout << "Deleting binary search tree" << endl;
 

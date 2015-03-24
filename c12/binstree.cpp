@@ -5,6 +5,57 @@
 
 using namespace std;
 
+int binstree::treeSucc(btreeElem *st)
+{
+  if (!st) return -1;
+
+  if (st->right) {
+    btreeElem *ret = minTree(st->right); return ret->key; 
+  }
+
+  btreeElem *p = st->parent;
+
+  while (p && p->right == st) {
+    st = p;
+    p = p->parent;
+  }
+
+  return (p? p->key: -1);
+
+}
+
+int binstree::treePred(btreeElem *st)
+{
+
+  if (!st) return -1;
+
+  if (st->left) {
+    btreeElem *ret = maxTree(st->left); return ret->key; 
+  }
+
+  btreeElem *p = st->parent;
+
+  while (p && p->left == st) {
+    st = p;
+    p = p->parent;
+  }
+
+  return (p? p->key: -1);
+
+}
+
+btreeElem* binstree::minTree(btreeElem *st)
+{ 
+  while (st && st->left) st = st->left;
+  return st;
+}
+
+btreeElem* binstree::maxTree(btreeElem *st)
+{
+  while (st && st->right) st = st->right;
+  return st;
+}
+
 btreeElem* binstree::searchTree(btreeElem *st, int v)
 { 
   while (st && st->key !=v) {
